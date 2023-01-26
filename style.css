@@ -1,0 +1,73 @@
+/* ! Change your default font before submitting your project */
+@import url('https://fonts.googleapis.com/css2?family=Smythe&display=swap');
+
+:root {
+  font-family: 'Smythe', cursive;
+  --main-color: #16db99;
+  /* font-family: system-ui; */
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#main {
+  margin: 0 auto;
+  max-width: 768px;
+}
+
+nav {
+  color: white;
+  padding: 1.5rem;
+  background: url(./img/header.png);
+  background-size: cover;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  margin: 1.5rem;
+  border-bottom: 1px solid #000;
+}
+
+.order-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.name,
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.ingredients {
+  font-size: 0.9rem;
+  color: #666;
+}
+.plus-btn {
+  color: #000;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
