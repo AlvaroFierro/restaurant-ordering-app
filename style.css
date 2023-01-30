@@ -1,10 +1,8 @@
-/* ! Change your default font before submitting your project */
 @import url('https://fonts.googleapis.com/css2?family=Smythe&display=swap');
 
 :root {
   font-family: 'Smythe', cursive;
   --main-color: #16db99;
-  /* font-family: system-ui; */
 }
 
 *,
@@ -15,12 +13,14 @@
   box-sizing: border-box;
 }
 
-#main {
+#menu-items,
+nav {
   margin: 0 auto;
   max-width: 768px;
 }
 
 nav {
+  font-size: x-large;
   color: white;
   padding: 1.5rem;
   background: url(./img/header.png);
@@ -30,14 +30,16 @@ nav {
 .menu {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 .order {
   display: flex;
+  margin: 1.5rem auto;
+  max-width: 95%;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 0;
-  margin: 1.5rem;
+  padding: 0 0 1.5rem 0;
   border-bottom: 1px solid #000;
 }
 
@@ -57,13 +59,14 @@ nav {
   font-size: 0.9rem;
   color: #666;
 }
-.plus-btn {
+
+.add-btn {
   color: #000;
   border: 1px solid #ccc;
   background-color: #fff;
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   font-size: 1.5rem;
   font-weight: bold;
   display: flex;
