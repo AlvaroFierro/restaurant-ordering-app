@@ -6,9 +6,8 @@ const orderItems = document.getElementById('order-items')
 let orders = []
 
 document.addEventListener('click', (e) => {
-  if (e.target.dataset.add) {
-    addItem(e.target.dataset.add)
-  }
+  if (e.target.dataset.add) addItem(e.target.dataset.add)
+  if (e.target.dataset.remove) removeItem(e.target.dataset.remove)
 })
 
 function addItem(name) {
@@ -17,6 +16,17 @@ function addItem(name) {
   })
   orderItems.classList.remove('hidden')
   orders.push(targetItem)
+  render()
+}
+
+function removeItem(name) {
+  const targetItem = menuArray.find((item) => {
+    return item.name === name
+  })
+  orders = orders.filter((item) => {
+    return item.name !== targetItem.name
+  })
+  if (orders.length === 0) orderItems.classList.add('hidden')
   render()
 }
 
@@ -32,7 +42,7 @@ function cartOrder() {
         <div class="item-cart">
           <div class="item-name">${item.name}</div>
           <div class="item-remove">
-            <button class="remove-btn">remove</button>
+            <button class="remove-btn" data-remove="${item.name}">remove</button>
           </div>
         </div>
         <div class="item-price">$${item.price}</div>
