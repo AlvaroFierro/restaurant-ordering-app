@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Jimmy's Dinner</title>
+    <script type="module" crossorigin src="/assets/index-e3002aa6.js"></script>
+    <link rel="stylesheet" href="/assets/index-77be4fb5.css">
+  </head>
+  <body>
+    <section id="main">
+      <nav>
+        <h1>Jimmy's Dinner</h1>
+        <span>The best burgers and pizzas in town</span>
+      </nav>
+
+      <main id="menu-items" class="container">
+        <!-- MENU HERE 👇🏻 -->
+      </main>
+
+      <section id="order-items" class="hidden container">
+        <!--ORDERS HERE 👇🏻-->
+      </section>
+    </section>
+
+    <section id="modal" class="hidden">
+      <div class="modal-card">
+        <div class="card-details"><h1>Enter card details</h1></div>
+        <div class="form">
+          <form id="form">
+            <input type="text" placeholder="Enter your name" id="name" name="name" />
+            <input type="tel" inputmode="numeric" placeholder="Enter card number" />
+            <input type="text" inputmode="numeric" placeholder="Enter CVV" />
+            <button type="submit" id="pay">Pay</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="confirmation">
+      <!-- CONFIRMATION DETAILS 👀 -->
+    </section>
+    
+  </body>
+</html>
