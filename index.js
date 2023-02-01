@@ -82,6 +82,7 @@ function paymentProcess() {
   orderItems.classList.add('hidden')
 
   payBtn.addEventListener('click', () => {
+    if (!form.checkValidity()) return
     modal.classList.add('hidden')
     orders = []
   })
