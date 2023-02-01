@@ -28,8 +28,20 @@
         <div class="form">
           <form id="form">
             <input type="text" placeholder="Enter your name" id="name" name="name" />
-            <input type="tel" inputmode="numeric" placeholder="Enter card number" />
-            <input type="text" inputmode="numeric" placeholder="Enter CVV" />
+            <input
+              type="tel"
+              inputmode="numeric"
+              minlength="16"
+              maxlength="19"
+              placeholder="Enter card number"
+            />
+            <input
+              type="text"
+              inputmode="numeric"
+              minlength="3"
+              maxlength="4"
+              placeholder="Enter CVV"
+            />
             <button type="submit" id="pay">Pay</button>
           </form>
         </div>
