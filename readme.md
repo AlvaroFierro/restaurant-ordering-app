@@ -13,6 +13,9 @@ Check the [live preview][live-preview] (mobile friendly 😊)
 
 <!-- Insert here a preview of your final app  -->
 
+![preview](https://user-images.githubusercontent.com/71525061/215977252-a81261fe-0416-4653-b469-44ace0bd85cf.gif)
+
+
 # Project description
 
 This is a simple restaurant ordering app built with HTML, CSS, JavaScript, and Vite. The app allows customers to select items from a menu and place their order.
