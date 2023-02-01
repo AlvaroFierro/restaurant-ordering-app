@@ -7,7 +7,7 @@
     <title>Jimmy's Dinner</title>
   </head>
   <body>
-    <div id="main">
+    <section id="main">
       <nav>
         <h1>Jimmy's Dinner</h1>
         <span>The best burgers and pizzas in town</span>
@@ -20,7 +20,25 @@
       <section id="order-items" class="hidden container">
         <!--ORDERS HERE 👇🏻-->
       </section>
-    </div>
+    </section>
+
+    <section id="modal" class="hidden">
+      <div class="modal-card">
+        <div class="card-details"><h1>Enter card details</h1></div>
+        <div class="form">
+          <form id="form">
+            <input type="text" placeholder="Enter your name" id="name" name="name" />
+            <input type="tel" inputmode="numeric" placeholder="Enter card number" />
+            <input type="text" inputmode="numeric" placeholder="Enter CVV" />
+            <button type="submit" id="pay">Pay</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="confirmation">
+      <!-- CONFIRMATION DETAILS 👀 -->
+    </section>
     <script type="module" src="./index.js"></script>
   </body>
 </html>

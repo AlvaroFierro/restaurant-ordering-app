@@ -2,12 +2,16 @@ import { menuArray } from './data.js'
 
 const menuItems = document.getElementById('menu-items')
 const orderItems = document.getElementById('order-items')
+const modal = document.getElementById('modal')
+const payBtn = document.getElementById('pay')
+const confirmationEl = document.getElementById('confirmation')
 
 let orders = []
 
 document.addEventListener('click', (e) => {
   if (e.target.dataset.add) addItem(e.target.dataset.add)
   if (e.target.dataset.remove) removeItem(e.target.dataset.remove)
+  if (e.target.id === 'checkout-btn') paymentProcess()
 })
 
 function addItem(name) {
@@ -59,11 +63,41 @@ function cartOrder() {
     </div>
   </div>
   <div class="checkout container">
-    <button class="checkout-btn">Complete order</button>
+    <button id="checkout-btn">Complete order</button>
   </div>
   `
 
   return orderHtml
+}
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+  const formData = new FormData(e.target)
+  const name = formData.get('name')
+  purchaseDetails(name)
+})
+
+function paymentProcess() {
+  modal.classList.remove('hidden')
+  orderItems.classList.add('hidden')
+
+  payBtn.addEventListener('click', () => {
+    modal.classList.add('hidden')
+    orders = []
+  })
+}
+
+function purchaseDetails(name) {
+  setTimeout(() => {
+    let confirmation = `<div class="confirmation-details container">
+    <div class="confirmation-text">Thanks, ${name}! Your order is on its way!</div>
+  </div>`
+    confirmationEl.innerHTML = confirmation
+
+    setTimeout(() => {
+      confirmationEl.innerHTML = ''
+    }, 3000)
+  }, 100)
 }
 
 function menu() {

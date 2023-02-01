@@ -3,6 +3,8 @@
 :root {
   font-family: 'Smythe', cursive;
   --main-color: #16db99;
+  --confirmation-color: #ecfdf5;
+  --confirmation-font: #065f46;
 }
 
 *,
@@ -119,13 +121,14 @@ nav {
   display: flex;
 }
 
-.checkout-btn {
+#checkout-btn,
+#pay {
   border: none;
   width: 100%;
   padding: 0.85rem 3rem;
   background-color: var(--main-color);
   color: white;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
   border-radius: 0.25rem;
   -webkit-border-radius: 0.25rem;
@@ -133,6 +136,55 @@ nav {
   -ms-border-radius: 0.25rem;
   -o-border-radius: 0.25rem;
   cursor: pointer;
+}
+
+#modal {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 20rem;
+  max-height: 20rem;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  text-align: center;
+}
+
+.modal-card {
+  padding: 2rem;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.modal-card,
+#form {
+  display: flex;
+  gap: 1.25rem;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+input {
+  border: 1px solid #212529;
+  padding: 10px;
+  width: 100%;
+  border-radius: 3px;
+  width: 15rem;
+}
+
+.confirmation-details {
+  background-color: var(--confirmation-color);
+  font-size: x-large;
+  padding: 1.5rem;
+  color: var(--confirmation-font);
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
